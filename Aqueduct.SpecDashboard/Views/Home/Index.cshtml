@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Aqueduct.SpecDashboard.Models.Report>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Reports</h2>
+
+@foreach (var report in Model)
+{
+    <div class="report">
+        <div class="reportName">@Html.ActionLink(report.Id, "Index", "Report", new { id=report.Id}, null)</div>
+        <div class="reportUpdated">@report.Latest.Date</div>
+        <span class="reportVersion">@report.Latest.Version</span>
+    </div>    
+}
