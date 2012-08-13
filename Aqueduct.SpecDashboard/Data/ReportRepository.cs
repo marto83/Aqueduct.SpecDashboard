@@ -44,13 +44,13 @@ namespace Aqueduct.SpecDashboard.Data
         private Report LoadReport(string path)
         {
             var report = new Report(Path.GetFileNameWithoutExtension(path));
-            IList<ReportVersion> getVersions =  GetVersions(path);
-            report.Versions = getVersions;
+            IEnumerable<ReportVersion> getVersions =  GetVersions(path);
+            report.Versions = getVersions.ToList();
 
             return report;
         }
 
-        private IList<ReportVersion> GetVersions(string path)
+        private IEnumerable<ReportVersion> GetVersions(string path)
         {
             var results = new List<ReportVersion>();
             foreach (var versionPath in Directory.GetDirectories(path))
@@ -60,7 +60,7 @@ namespace Aqueduct.SpecDashboard.Data
                 version.Statistics = CalculateStatistics(version);
                 results.Add(version);
             }
-            return results;
+            return results.OrderByDescending(x => x.Date);
         }
 
         private ReportTestStatistics CalculateStatistics(ReportVersion version)
@@ -70,7 +70,7 @@ namespace Aqueduct.SpecDashboard.Data
             //Calucate all the stats 
             // Load test results xml from the latest version
             var xmlPath = Path.Combine(version.Path, "TestResult.xml");
-            if(xmlPath != null)
+            if(File.Exists(xmlPath))
             {
                 var document = LoadXml(xmlPath);
 
@@ -88,8 +88,6 @@ namespace Aqueduct.SpecDashboard.Data
 
                 int success = noOfTests - noOfFailures - noOfInconclusive;
                 statistics.Success = success;
-
-                
             }
             return statistics;
         }

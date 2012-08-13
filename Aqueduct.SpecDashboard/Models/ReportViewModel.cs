@@ -33,6 +33,9 @@ namespace Aqueduct.SpecDashboard.Models
         public string Name { get; set; }
 
         public DateTime Date { get; set; }
+
+        public bool HasDetailedStats { get; set; }
+        public bool HasPreviousStats { get; set; }
         
         
     }

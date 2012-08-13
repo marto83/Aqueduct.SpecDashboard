@@ -12,7 +12,7 @@ namespace Aqueduct.SpecDashboard.Models
 
         public static ReportVersion Empty
         {
-            get { return new ReportVersion { Date = DateTime.MinValue, Version = "0.0.0.0", Statistics = new ReportTestStatistics(), Path = string.Empty}; }
+            get { return new ReportVersion { Date = DateTime.MinValue, Version = "0.0.0.0", Statistics = ReportTestStatistics.Empty, Path = string.Empty}; }
         }
     }
 }
