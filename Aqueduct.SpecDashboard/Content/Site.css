@@ -74,9 +74,10 @@ textarea
     display: none;
 }
 
-.report {
-    width: 200px;
-    height: 200px;
+.report 
+{
+    width: 300px;
+    min-height: 200px;
     float: left;
     padding: 10px;
     border: solid 1px black;
@@ -84,11 +85,62 @@ textarea
     position: relative;
 }
 
-.report .reportVersion 
+
+.report .reportNo
 {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+    font-size: 125%;
+    display: block;
+    text-align: center;
+}
+
+.report .success 
+{
+    position: relative;
+    float: left;
+    width: 33%;
+    color: greenyellow;
+}
+
+.report .inconclusive 
+{
+    position: relative;
+    float: left;
+    width: 33%;
+    color: orange;
+    text-align: center;
+}
+
+.report .failed 
+{
+    position: relative;
+    float: left;
+    width: 33%;
+    color: red;
+    text-align: right;
+    
+}
+
+.report .percentGreen 
+{
+    color: greenyellow;        
+}
+
+.report .percentOrange 
+{
+    color: orange;   
+}
+
+.report .percentRed 
+{
+    color: red;   
+}
+
+.report .percent 
+{
+    display: block;
+    text-align: center;
+    font-size: 400%;
+    font-weight: bold;
 }
 
 .report .reportName 
@@ -118,4 +170,61 @@ textarea
 {
     margin-left: 255px;
     height: 100%
+}
+
+.statusBar
+{
+    width: 250px;
+    height: 20px;
+    margin: 0 auto;
+    
+}
+
+.statusBar div 
+{
+    float: left;
+}
+
+.report .reportTime
+{
+    font-size: 80%;
+    margin-top: 20px;
+    display: block;
+    text-align: right;
+}
+
+header 
+{
+    color: white;
+    height: 60px;
+    font-size: 300%;
+    text-align: center;    
+}
+
+footer 
+{
+    position: fixed;
+    color: white;
+    height: 30px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+
+.arrow 
+{
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.arrow img 
+{
+    width: 100%;
+}
+
+.arrow .neutral 
+{
+    height: 10px;   
 }

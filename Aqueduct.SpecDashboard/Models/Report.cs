@@ -6,11 +6,12 @@ namespace Aqueduct.SpecDashboard.Models
 {
     public class Report
     {
-       public Report(string id)
+        public Report(string id)
         {
             Id = id;
             Versions = new List<ReportVersion>();
         }
+
         public string Id { get; private set; }
 
         public IList<ReportVersion> Versions { get; set; }
@@ -19,5 +20,15 @@ namespace Aqueduct.SpecDashboard.Models
         {
             get { return Versions.OrderByDescending(x => x.Date).FirstOrDefault() ?? ReportVersion.Empty; }
         }
+
+        public ReportVersion Previous
+        {
+            get
+            {
+                return Versions.OrderByDescending(x => x.Date).ElementAtOrDefault(1) ?? ReportVersion.Empty;
+            }
+        }
     }
+
+    
 }
