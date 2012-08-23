@@ -228,3 +228,34 @@ footer
 {
     height: 8px;
 }
+
+#loginDisplay 
+{
+    float: right;
+    color: white;
+    margin-top: -35px;
+    font-size: 20px;
+}
+#loginDisplay a {
+    color: grey;
+    text-decoration: none;
+}
+#loginDisplay a:hover {
+    text-decoration: underline;
+}
+
+.register 
+{
+    width: 50px;
+}
+
+.userNames 
+{
+    font-weight: bold;
+}
+
+.userNames div 
+{
+    font-weight: normal;
+}
+

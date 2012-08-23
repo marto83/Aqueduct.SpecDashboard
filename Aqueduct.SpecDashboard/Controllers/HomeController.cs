@@ -21,6 +21,11 @@ namespace Aqueduct.SpecDashboard.Controllers
 
         public ActionResult Index()
         {
+            return RedirectToAction("LogOn", "Account");
+        }
+
+        public ActionResult Dashboard()
+        {
             var reports = _repository.GetReports();
 
             //Create an object that can be easily used on the view to avoid logic inside the view
@@ -58,6 +63,7 @@ namespace Aqueduct.SpecDashboard.Controllers
 
             return View(viewReports);
         }
+
         private static void GetPreviousVersionStats(Report report, ReportViewModel viewReport, ReportTestStatistics latestStats)
         {
             if (report.Previous == null)

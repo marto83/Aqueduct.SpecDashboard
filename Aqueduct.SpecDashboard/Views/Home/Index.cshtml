@@ -1,8 +1,7 @@
 ﻿@using Aqueduct.SpecDashboard.Models
 @model IEnumerable<Aqueduct.SpecDashboard.Models.ReportViewModel>
 
-<header style="background-color: black">
-Aqueduct Automated Reports</header>
+
 
 @{
     ViewBag.Title = "Home";
@@ -47,8 +46,7 @@ Aqueduct Automated Reports</header>
     
     
 }
-<footer style="background-color: black">
-(c) copyright Aqueduct 2012</footer>
+
 
 
 @helper GetStateIcon(ReportViewModel.ProjectStateChange stateChange)
@@ -56,13 +54,13 @@ Aqueduct Automated Reports</header>
     @switch (stateChange)
     {
         case ReportViewModel.ProjectStateChange.Good:
-            <img src="../../Content/images/Same_Arrow.png"/>
+            <img src="../../Content/images/Up_Arrow.png"/>
             break;
         case ReportViewModel.ProjectStateChange.Bad:
             <img src="../../Content/images/Down_Arrow.png"/>
             break;
         case ReportViewModel.ProjectStateChange.Neutral:
-            <div class="neutral" style="background-color: black"></div>
+            <div class="neutral" style="background-color: grey"></div>
             break;
         default:
             throw new ArgumentOutOfRangeException("stateChange");
