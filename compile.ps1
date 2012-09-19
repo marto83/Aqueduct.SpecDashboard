@@ -68,7 +68,7 @@ task CoverageReport -depends UnitTest {
 }
 
 task CombineMinify -depends Compile {
-	exec { & $tools_dir\nodejs\node.exe "$tools_dir\requirejs\r.js" -o "build.js" appDir="$frontend_base_dir" dir="$frontend_base_dir" > $build_dir\reports\combineminify.txt } 
+	#exec { & $tools_dir\nodejs\node.exe "$tools_dir\requirejs\r.js" -o "build.js" appDir="$frontend_base_dir" dir="$frontend_base_dir" > $build_dir\reports\combineminify.txt } 
 }
 
 task PublishLocal -depends Compile, CombineMinify {
@@ -78,10 +78,6 @@ task PublishLocal -depends Compile, CombineMinify {
 	{
 		write-host "Publishing $config"
 		exec { msbuild /t:PipelinePreDeployCopyAllFilesToOneFolder /p:_PackageTempDir="$publish_dir\$config\\" /verbosity:quiet /p:Configuration="$config" "$website_file"  }
-		
-		robocopy "$frontend_base_dir\css" "$publish_dir\$config\css" /e /njh /njs /ndl /nc /ns /np /nfl
-		robocopy "$frontend_base_dir\js" "$publish_dir\$config\js" /e /njh /njs /ndl /nc /ns /np /nfl
-		robocopy "$frontend_base_dir\lib" "$publish_dir\$config\lib" /e /njh /njs /ndl /nc /ns /np /nfl
 	}
 }
 
