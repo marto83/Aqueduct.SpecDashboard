@@ -6,7 +6,6 @@ properties {
 	$publish_dir = "$build_dir\publish"
 	$frontend_base_dir = "$build_dir\_PublishedWebsites\Aqueduct.SpecDashboard"
 	$unit_tests_dir = "$build_dir\unit tests"
-	$integration_tests_dir = "$build_dir\integration tests"
 	
 	#MSBuild Settings
 	$sln_file = "$base_dir\src\Aqueduct.SpecDashboard.sln"
@@ -54,18 +53,14 @@ function KillNUnitAgent {
 }
 
 task UnitTest -depends Compile {
-	$test_dlls = Get-ChildItem $unit_tests_dir\*.Tests.dll
-	
-	RunTests $test_dlls $unit_tests_dir
+	if (Test-Path $unit_tests_dir)
+	{	
+		$test_dlls = Get-ChildItem $unit_tests_dir\*.Tests.dll	
+		RunTests $test_dlls $unit_tests_dir
+	}
 }
 
-task IntegrationTest -depends UnitTest {
-	$test_dlls = Get-ChildItem $integration_tests_dir\*.Tests.dll -Exclude *.Selenium.Tests.dll
-	
-	RunTests $test_dlls $integration_tests_dir
-}
-
-task CoverageReport -depends UnitTest, IntegrationTest { 	
+task CoverageReport -depends UnitTest { 	
 	$reports = Get-ChildItem "$build_dir\* tests\results*.xml"
 	$reports_list = [string]::join(';', $reports)
 	
