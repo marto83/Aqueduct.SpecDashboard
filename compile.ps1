@@ -61,10 +61,10 @@ task UnitTest -depends Compile {
 }
 
 task CoverageReport -depends UnitTest { 	
-	$reports = Get-ChildItem "$build_dir\* tests\results*.xml"
-	$reports_list = [string]::join(';', $reports)
+	#$reports = Get-ChildItem "$build_dir\* tests\results*.xml"
+	#$reports_list = [string]::join(';', $reports)
 	
-	exec { & $tools_dir\ReportGenerator\bin\ReportGenerator.exe "-reports:$reports_list" "-targetdir:$build_dir\reports" -verbosity:Error }	
+	#exec { & $tools_dir\ReportGenerator\bin\ReportGenerator.exe "-reports:$reports_list" "-targetdir:$build_dir\reports" -verbosity:Error }	
 }
 
 task CombineMinify -depends Compile {
