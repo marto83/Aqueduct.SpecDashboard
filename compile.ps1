@@ -9,7 +9,7 @@ properties {
 	$integration_tests_dir = "$build_dir\integration tests"
 	
 	#MSBuild Settings
-	$sln_file = "$base_dir\src\SAFC.sln"
+	$sln_file = "$base_dir\src\Aqueduct.SpecDashboard.sln"
 	$website_file = "$base_dir\src\Aqueduct.SpecDashboard\Aqueduct.SpecDashboard.csproj"	
 	$framework = "4.0" #Needed by PSAKE
 	$configs = "Release"
