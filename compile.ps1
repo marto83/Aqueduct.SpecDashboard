@@ -41,7 +41,7 @@ function RunTests($test_dlls, $folder) {
 		$name = $dll.name
 		Write-Host $name
 		
-		exec { & $tools_dir\opencover\opencover.console.exe "-target:$tools_dir\nunit\nunit-console.exe" "-targetargs:$name /noshadow /nologo /xml:TestResult-$name.xml" -register:user "-output:results-$name.xml" "-filter:+[SAFC*]* -[*Tests]* -[SAFC.Site]SAFC.Site.layouts.*" -log:all -returntargetcode }
+		exec { & $tools_dir\opencover\opencover.console.exe "-target:$tools_dir\nunit\nunit-console.exe" "-targetargs:$name /noshadow /nologo /xml:TestResult-$name.xml" -register:user "-output:results-$name.xml" "-filter:+[Aqueduct*]* -[*Tests]* -[Aqueduct.Site]Aqueduct.Site.layouts.*" -log:all -returntargetcode }
 	}
 	
 	KillNUnitAgent	
