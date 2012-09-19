@@ -10,7 +10,7 @@ properties {
 	$framework = "4.0" #Needed by PSAKE
 	
 	#Deploy to live. Yes, immediately.
-	$config = "Debug"
+	$config = "Release"
 	$site_unc = "\\aque-sqldev\d$\Websites\Aqueduct\SpecDashboard"
 	$site_url = "http://spec.aquepreview.com"
 } 
