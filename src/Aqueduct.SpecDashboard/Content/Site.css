@@ -1,0 +1,261 @@
+body
+{
+    font-size: .85em;
+    font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background-color: #fff;
+}
+
+header,
+footer,
+nav,
+section {
+    display: block;
+}
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+
+fieldset 
+{
+    border:1px solid #ddd;
+    padding:0 1.4em 1.4em 1.4em;
+    margin:0 0 1.5em 0;
+}
+
+legend 
+{
+    font-size:1.2em;
+    font-weight: bold;
+}
+
+textarea 
+{
+    min-height: 75px;
+}
+
+.editor-label 
+{
+    margin: 1em 0 0 0;
+}
+
+.editor-field 
+{
+    margin:0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
+
+.report 
+{
+    width: 300px;
+    min-height: 200px;
+    float: left;
+    padding: 10px;
+    border: solid 1px black;
+    margin-right: 15px;
+    position: relative;
+}
+
+
+.report .reportNo
+{
+    font-size: 125%;
+    display: block;
+    text-align: center;
+}
+
+.report .success 
+{
+    position: relative;
+    float: left;
+    width: 33%;
+    color: greenyellow;
+}
+
+.report .inconclusive 
+{
+    position: relative;
+    float: left;
+    width: 33%;
+    color: orange;
+    text-align: center;
+}
+
+.report .failed 
+{
+    position: relative;
+    float: left;
+    width: 33%;
+    color: red;
+    text-align: right;
+    
+}
+
+.report .percentGreen 
+{
+    color: greenyellow;        
+}
+
+.report .percentOrange 
+{
+    color: orange;   
+}
+
+.report .percentRed 
+{
+    color: red;   
+}
+
+.report .percent 
+{
+    display: block;
+    text-align: center;
+    font-size: 400%;
+    font-weight: bold;
+}
+
+.report .reportName 
+{
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.report .reportUpdated 
+{
+    font-size: 80%;
+}
+
+.reportWrapper  
+{
+    position: relative;
+}
+
+.reportWrapper .reportNavigation 
+{
+    width:250px;
+    position: absolute;
+    border-right: solid 1px black;
+    }
+    
+.reportWrapper .reportContents 
+{
+    margin-left: 255px;
+    height: 100%
+}
+
+.statusBar
+{
+    width: 250px;
+    height: 20px;
+    margin: 0 auto;
+    
+}
+
+.statusBar div 
+{
+    float: left;
+}
+
+.report .reportTime
+{
+    font-size: 80%;
+    margin-top: 20px;
+    display: block;
+    text-align: right;
+}
+
+header 
+{
+    color: white;
+    height: 60px;
+    font-size: 300%;
+    text-align: center;    
+}
+
+footer 
+{
+    position: fixed;
+    color: white;
+    height: 30px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+
+.arrow 
+{
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.arrow img 
+{
+    width: 100%;
+}
+
+.arrow .neutral 
+{
+    height: 8px;
+}
+
+#loginDisplay 
+{
+    float: right;
+    color: white;
+    margin-top: -35px;
+    font-size: 20px;
+}
+#loginDisplay a {
+    color: grey;
+    text-decoration: none;
+}
+#loginDisplay a:hover {
+    text-decoration: underline;
+}
+
+.register 
+{
+    width: 50px;
+}
+
+.userNames 
+{
+    font-weight: bold;
+}
+
+.userNames div 
+{
+    font-weight: normal;
+}
+

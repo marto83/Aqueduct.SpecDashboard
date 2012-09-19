@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"[]>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>LDC Navigation</title>
+    <link rel="stylesheet" href="../master.css" type="text/css" />
+    <link rel="stylesheet" href="../print.css" type="text/css" media="print" />
+    <script src="../scripts/jquery.js" type="text/javascript"></script>
+    <script src="../scripts/scripts.js" type="text/javascript"></script>
+    <script type="text/javascript">
+$(document).ready(function() {
+  initializeToc();
+});
+</script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="top" />
+      <div id="toc">
+        <p class="tocCollapser" title="Collapse Table of Content">«</p>
+        <ul class="features">
+          <li class="file" id="root">
+            <a href="../index.html">Home</a>
+          </li>
+          <li>
+            <div class="directory">
+              <a href="index.html">Components</a>
+            </div>
+            <ul class="features">
+              <li class="file">
+                <span class="current">LDC Navigation</span>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div class="directory">
+              <a href="../Pages/index.html">Pages</a>
+            </div>
+            <ul class="features">
+              <li class="file">
+                <a href="../Pages/ContentPages.html">Content pages</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div id="feature">
+        <div class="float-right">
+          <img src="file:///C:/projects/LloydsTesting/build/output/documentation/images/failure.png" title="Failed" alt="Failed" />
+        </div>
+        <h1>LDC Navigation</h1>
+        <ul id="scenarios">
+          <li class="scenario">
+            <div class="float-right">
+              <img src="file:///C:/projects/LloydsTesting/build/output/documentation/images/failure.png" title="Failed" alt="Failed" />
+            </div>
+            <div class="scenario-heading">
+              <h2>Navigation</h2>
+            </div>
+            <div class="steps">
+              <ul>
+                <li class="step">
+                  <span class="keyword">Given </span>I have navigated to "&lt;Page&gt;"</li>
+                <li class="step">
+                  <span class="keyword">Then </span>I can see that the LDC top navigation panel contains<div class="table_container"><table class="datatable"><thead><tr><th>Name</th></tr></thead><tbody><tr><td>Lloyd's</td></tr><tr><td>The Market</td></tr><tr><td>News and Insight</td></tr></tbody></table></div></li>
+              </ul>
+            </div>
+            <div class="examples">
+              <h3>Examples</h3>
+              <div class="table_container">
+                <table class="datatable">
+                  <thead>
+                    <tr>
+                      <th>Page</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>/</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id="footer">
+        <p>Pickled on: 27 June 2012 09:03:26</p>
+        <p>Produced by Pickles, version 0.6.0.0</p>
+      </div>
+    </div>
+  </body>
+</html>
