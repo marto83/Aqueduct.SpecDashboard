@@ -16,7 +16,7 @@ namespace Aqueduct.SpecDashboard.Controllers
         //
         // GET: /Account/LogOn
 
-        public ActionResult LogOn()
+        public ActionResult Login()
         {
             return View();
         }
@@ -25,7 +25,7 @@ namespace Aqueduct.SpecDashboard.Controllers
         // POST: /Account/LogOn
 
         [HttpPost]
-        public ActionResult LogOn(LogOnModel model, string returnUrl)
+        public ActionResult Login(LogOnModel model, string returnUrl)
         {
             if (ModelState.IsValid)
             {

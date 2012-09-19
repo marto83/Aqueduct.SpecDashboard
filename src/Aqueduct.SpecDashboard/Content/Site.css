@@ -1,5 +1,6 @@
 body
 {
+    margin: 0px;
     font-size: .85em;
     font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
     color: #232323;
@@ -11,6 +12,10 @@ footer,
 nav,
 section {
     display: block;
+}
+
+section.content {
+    margin: 0px 10px;
 }
 
 /* Styles for basic forms
@@ -233,7 +238,7 @@ footer
 {
     float: right;
     color: white;
-    margin-top: -35px;
+    margin: -35px 10px 0 0;
     font-size: 20px;
 }
 #loginDisplay a {

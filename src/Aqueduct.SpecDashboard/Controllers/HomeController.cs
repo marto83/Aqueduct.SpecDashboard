@@ -21,7 +21,7 @@ namespace Aqueduct.SpecDashboard.Controllers
 
         public ActionResult Index()
         {
-            return RedirectToAction("LogOn", "Account");
+            return RedirectToAction("Login", "Account");
         }
 
         public ActionResult Dashboard()
