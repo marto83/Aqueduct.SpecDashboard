@@ -9,15 +9,10 @@ properties {
 	#MSBuild Settings
 	$framework = "4.0" #Needed by PSAKE
 	
-	#Dev Site Settings - override these if deploying to live or staging
+	#Deploy to live. Yes, immediately.
 	$config = "Debug"
-	$site_unc = "\\dev3\d$\Websites\SAFC\dev.safc.aquepreview.com\Website"
-	$site_url = "http://dev.safc.aquepreview.com"
-	
-	#Staging Site Settings
-	# $config = "Staging"
-	# $site_unc = "\\dev3\d$\websites\safc\staging.safc.aquepreview.com\website"
-	# $site_url = "http://staging.safc.aquepreview.com"
+	$site_unc = "\\aque-sqldev\d$\Websites\Aqueduct\SpecDashboard"
+	$site_url = "http://spec.aquepreview.com"
 } 
 
 task UnZip {
