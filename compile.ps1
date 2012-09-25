@@ -77,7 +77,7 @@ task PublishLocal -depends Compile, CombineMinify {
 	foreach ($config in $configs)
 	{
 		write-host "Publishing $config"
-		exec { msbuild /t:PipelinePreDeployCopyAllFilesToOneFolder /p:_PackageTempDir="$publish_dir\$config\\" /verbosity:quiet /p:Configuration="$config" "$website_file"  }
+		exec { msbuild /t:PipelinePreDeployCopyAllFilesToOneFolder /p:_PackageTempDir="$publish_dir\$config\\" /p:Configuration="$config" "$website_file"  }
 	}
 }
 
